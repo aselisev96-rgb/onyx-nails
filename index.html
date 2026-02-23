@@ -1,127 +1,50 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONYX NAILS | Digital Asset</title>
-    
-    <!-- ПОЛНЫЕ РАБОЧИЕ ССЫЛКИ (ИСПРАВЛЕНО) -->
 
- <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link href="https://unpkg.com" rel="stylesheet">
-    <style>
-        :root { --gold: #c5a059; --dark: #0a0a0a; --wa: #25d366; --tg: #0088cc; --viber: #7360f2; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--dark); color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
+ONYX NAILS | Digital Asset
 
-        header {
-            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
-            position: fixed; width: 100%; box-sizing: border-box; z-index: 100; backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; text-decoration:none; color:#fff; letter-spacing: 3px; }
-        .logo span { color: var(--gold); font-size: 0.6rem; display: block; letter-spacing: 5px; text-transform: uppercase; margin-top: 5px; }
 
-        .hero {
-            height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-            padding: 0 10%;
-        }
-        .hero-content { max-width: 800px; }
-        .hero h1 { 
-            font-size: clamp(3rem, 15vw, 8rem); margin: 0; text-transform: uppercase; 
-            font-weight: 900; line-height: 0.85; letter-spacing: -2px; 
-        }
-        .hero p { 
-            color: var(--gold); letter-spacing: 8px; text-transform: uppercase; 
-            font-size: 0.8rem; margin: 30px 0 40px; font-weight: 300; 
-        }
+:root { --gold: #c5a059; --dark: #0a0a0a; --wa: #25d366; --tg: #0088cc; --viber: #7360f2; }
+body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--dark); color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
+header { padding: 25px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; box-sizing: border-box; z-index: 100; backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; text-decoration:none; color:#fff; letter-spacing: 3px; }
+.logo span { color: var(--gold); font-size: 0.6rem; display: block; letter-spacing: 5px; text-transform: uppercase; margin-top: 5px; }
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%); padding: 0 10%; }
+.hero h1 { font-size: clamp(3rem, 15vw, 8rem); margin: 0; text-transform: uppercase; font-weight: 900; line-height: 0.85; letter-spacing: -2px; }
+.hero p { color: var(--gold); letter-spacing: 8px; text-transform: uppercase; font-size: 0.8rem; margin: 30px 0 40px; font-weight: 300; }
+.btn-buy { display: inline-block; padding: 22px 60px; background: var(--gold); color: #000; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; transition: 0.5s; border-radius: 2px; font-size: 0.8rem; box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2); }
+.social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: #222; }
+.soc-card { padding: 50px 10px; text-align: center; text-decoration: none; color: #fff; background: var(--dark); transition: 0.4s; }
+.soc-card:hover { color: var(--gold); background: #111; }
+.soc-card svg { width: 40px; height: 40px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+.services { padding: 120px 10%; max-width: 900px; margin: 0 auto; }
+.price-item { display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid #222; font-size: 1rem; }
+footer { padding: 80px 10%; text-align: center; background: #050505; }
 
-        .btn-buy { 
-            display: inline-block; padding: 22px 60px; background: var(--gold); color: #000; 
-            text-decoration: none; font-weight: 900; text-transform: uppercase; 
-            letter-spacing: 3px; transition: 0.5s; border-radius: 2px; font-size: 0.8rem;
-            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
-        }
-        .btn-buy:hover { transform: translateY(-5px); background: #fff; box-shadow: 0 20px 40px rgba(197, 160, 89, 0.4); }
 
-        .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: #222; }
-        .soc-card { padding: 50px 10px; text-align: center; text-decoration: none; color: #fff; background: var(--dark); transition: 0.4s; }
-        .soc-card:hover { color: var(--gold); background: #111; }
-        .soc-card i { font-size: 2.5rem; display: block; margin-bottom: 15px; }
-        .soc-card span { font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; }
 
-        .services { padding: 120px 10%; max-width: 900px; margin: 0 auto; }
-        .price-item { display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid #222; font-size: 1rem; }
-        .price-item span:last-child { color: var(--gold); font-weight: 900; }
+ONYX NAILSESTHETIC STUDIO
 
-        footer { padding: 100px 10%; text-align: center; background: #050505; border-top: 1px solid #1a1a1a; }
-        .footer-call { 
-            display: inline-block; margin-top: 20px; padding: 18px 45px; 
-            border: 1px solid var(--gold); color: var(--gold); text-decoration: none; 
-            font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; transition: 0.4s; 
-        }
-        .footer-call:hover { background: var(--gold); color: #000; }
+Красота до кончиков пальцевPREMIUM
+ONYXОТКРЫТЬ WHATSAPP
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 4.5rem; }
-            .social-grid { grid-template-columns: repeat(2, 1fr); }
-            .soc-card:last-child { grid-column: span 2; }
-        }
-    </style>
-</head>
-<body>
 
-    <header>
-        <a href="#" class="logo">ONYX NAILS<span>ESTHETIC STUDIO</span></a>
-        <div style="font-size: 0.55rem; font-weight: 700; border: 1px solid var(--gold); padding: 5px 10px; color: var(--gold); letter-spacing: 1px;">FOR SALE • BY/RU</div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
-            <p>Искусство красоты до кончиков пальцев</p>
-            <h1>PREMIUM<br>ONYX</h1>
-            <a href="https://wa.me" class="btn-buy">ОТКРЫТЬ WHATSAPP</a>
-        </div>
-    </section>
 
-    <div class="social-grid">
-        <a href="https://wa.me" class="soc-card" data-aos="fade-up">
-            <i class="fa-brands fa-whatsapp" style="color:var(--wa)"></i><span>WHATSAPP</span>
-        </a>
-        <a href="viber://chat?number=%2B375255224156" class="soc-card" data-aos="fade-up" data-aos-delay="100">
-            <i class="fa-brands fa-viber" style="color:var(--viber)"></i><span>VIBER</span>
-        </a>
-        <a href="tel:+375255224156" class="soc-card" data-aos="fade-up" data-aos-delay="200">
-            <i class="fa-solid fa-phone" style="color:var(--gold)"></i><span>ЗВОНОК</span>
-        </a>
-        <a href="https://t.me" class="soc-card" data-aos="fade-up" data-aos-delay="300">
-            <i class="fa-brands fa-telegram" style="color:var(--tg)"></i><span>TELEGRAM</span>
-        </a>
-        <a href="https://tiktok.com" class="soc-card" data-aos="fade-up" data-aos-delay="400">
-            <i class="fa-brands fa-tiktok"></i><span>TIKTOK</span>
-        </a>
-    </div>
+WHATSAPP
 
-    <section class="services" data-aos="fade-up">
-        <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; text-align: center; color: var(--gold); margin-bottom: 50px;">Service Menu</h2>
-        <div class="price-item"><span>Маникюр (Комплекс)</span><span>55 BYN / 1500 RUB</span></div>
-        <div class="price-item"><span>Smart-педикюр (Полный)</span><span>75 BYN / 2100 RUB</span></div>
-        <div class="price-item"><span>Укрепление гелем</span><span>+15 BYN / 400 RUB</span></div>
-    </section>
 
-    <footer>
-        <div data-aos="zoom-in">
-            <h3 style="letter-spacing: 3px; font-weight: 300; margin-bottom: 30px;">СВЯЗЬ С РАЗРАБОТЧИКОМ</h3>
-            <a href="viber://chat?number=%2B375255224156" class="footer-call">НАПИСАТЬ В VIBER</a>
-            <p style="margin-top: 50px; font-size: 0.6rem; color: #444; letter-spacing: 2px;">DIGITAL ASSET | BY JARVIS SYSTEM | 2026</p>
-        </div>
-    </footer>
 
-    <script src="https://unpkg.com"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
-    </script>
-</body>
-</html>
+VIBER
 
+
+
+ЗВОНОК
+
+
+
+TELEGRAM
+
+
+
+Service Menu
+Маникюр55 BYN
+Педикюр75 BYN
